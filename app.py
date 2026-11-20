@@ -25,9 +25,9 @@ elif language == "french":
 else: 
     print("You did not type a valid language")
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that yype inform the user
+search = input("Search for a pokemon: ")
 def search():
     searched = []
-    search = input("Search for a pokemon: ")
     if search == ["name"]:
         print(search)
         searched.append(search)
@@ -37,8 +37,9 @@ def search():
     
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 def get_pokemon(pokemon):
-    poke = search
-    return poke
+    if search in data:
+        return get_pokemon
+
 
 
 
@@ -47,6 +48,8 @@ def get_pokemon(pokemon):
 def get_moves(poke):
     x = get_pokemon(poke)
 
+
 i = int(input("Select a number: "))
 print(data[i]["name"]["english"])
 print(data[i]["type"])
+
